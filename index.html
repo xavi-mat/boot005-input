@@ -2,93 +2,113 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viejuners rule!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viejuners rule!</title>
 </head>
 
 <body>
-    <nav>
-        <a href="index.html">Club viejuner</a> |
-        <a href="robabicis.html">Denuncia bici robada</a>
-    </nav>
+  <nav>
+    <a href="index.html">Club viejuner</a> |
+    <a href="robabicis.html">Denuncia bici robada</a>
+  </nav>
 
-    <h1>Club viejuner</h1>
-    <img src="https://raw.githubusercontent.com/TheBridge-FullStackDeveloper/html-pp-formularios/master/abueletes.jpg"
-        alt="Abueletes en bici" width="100%">
-    <br>
-    <br>
-    <form method="get">
-        <table>
-            <tr>
+  <h1>Club viejuner</h1>
+  <img src="https://raw.githubusercontent.com/TheBridge-FullStackDeveloper/html-pp-formularios/master/abueletes.jpg"
+    alt="Abueletes en bici" width="100%">
+  <br>
+  <br>
+  <form method="get">
+    <table>
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Tú</legend>
+            <table cellpadding="5">
+              <tr>
                 <td>
-                    <fieldset>
-                        <legend>Tú</legend>
-                        <table cellpadding="5">
-                            <tr>
-                                <td>
-                                    <label for="name">*Nombre:</label>
-                                    <input type="text" name="name" id="name" placeholder="Nombre" maxlength="30"
-                                        required>
-                                </td>
-                                <td>
-                                    <label for="surname">*Apellidos:</label>
-                                    <input type="text" name="surname" id="surname" placeholder="Apellidos"
-                                        maxlength="40" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="age">*Edad</label>
-                                    <input type="number" name="age" id="age" min="70" value="70" size="5" required>
-                                    <br>
-                                    <br>
-                                    <input type="checkbox" name="soyviejuner" id="soyviejuner" required>
-                                    <label for="soyviejuner">*Me siento viejuner</label>
-                                </td>
-                                <td>
-                                    <fieldset>
-                                        <legend>*Sexo</legend>
-                                        <input type="radio" name="sex" id="sex-female" value="female" required>
-                                        <label for="sex-female">Femenino</label>
-                                        <br>
-                                        <input type="radio" name="sex" id="sex-male" value="male" required>
-                                        <label for="sex-male">Masculino</label>
-                                    </fieldset>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <textarea name="aboutme" id="aboutme" rows="5" cols="50"
-                                        placeholder="Escribe algo sobre ti (opcional)"></textarea>
-                                </td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                    <br>
-                    <fieldset>
-                        <legend>Tus circunstancias</legend>
-                        <label for="email">*Correo electrónico</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="telf">*Teléfono</label>
-                        <input type="text" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required>
-
-                    </fieldset>
-                    *Todos los campos con asterisco (*) son obligatorios.
-                    <br>
-                    <br>
-                    <input type="reset" value="Vaciar formulario">
-                    <input type="submit" value="Enviar formulario">
+                  <label for="name">*Nombre:</label>
                 </td>
-            </tr>
-        </table>
-    </form>
+                <td>
+                  <input type="text" name="name" id="name" placeholder="Nombre" maxlength="40" size="40" required autofocus tabindex="1">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="surname">*Apellidos:</label>
+                </td>
+                <td>
+                  <input type="text" name="surname" id="surname" placeholder="Apellidos" maxlength="40" size="40" required tabindex="2">
+                </td>
+              </tr>
+              </table>
+              <table cellpadding="5">
+              <tr>
+                <td>
+                  <label for="age">*Edad</label>
+                  <input type="number" name="age" id="age" min="70" value="70" size="5" required tabindex="3">
+                  <br>
+                  <br>
+                  <input type="checkbox" name="soyviejuner" id="soyviejuner" required tabindex="4"
+                    onchange="okviejuner.innerText=this.checked ? 'VIEJUNER CERTIFIED!' : '&nbsp;'">
+                  <label for="soyviejuner">*Me siento viejuner</label>
+                  <div><b id="okviejuner">&nbsp;</b></div>
+                </td>
+                <td>
+                  <fieldset>
+                    <legend>*Sexo</legend>
+                    <input type="radio" name="sex" id="sex-female" value="female" required tabindex="5">
+                    <label for="sex-female">Femenino</label>
+                    <br>
+                    <input type="radio" name="sex" id="sex-male" value="male" required tabindex="6">
+                    <label for="sex-male">Masculino</label>
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <textarea name="aboutme" id="aboutme" rows="5" cols="50"
+                    placeholder="Escribe algo sobre ti (opcional)" tabindex="7"></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Tus circunstancias</legend>
+            <table cellpadding="5">
+              <tr>
+                <td>
+                  <label for="email">*Correo electrónico</label>
+                </td>
+                <td>
+                  <input type="email" name="email" id="email" size="40" maxlength="50" placeholder="Correo electrónico" required tabindex="8">
+                </td>
+                </tr>
+                <tr>
+                <td>
+                  <label for="telf">*Teléfono</label>
+                </td>
+                <td>
+                  <input type="text" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required tabindex="9">
+                </td>
+              </tr>
+            </table>
 
-    <footer><br>
-        <hr>
-        <center>&copy; by xavimat</center>
-    </footer>
+          </fieldset>
+          <p>*Todos los campos con asterisco (*) son obligatorios.</p>
+          <div align="right">
+            <input type="reset" value="Vaciar formulario" tabindex="-1">
+            <input type="submit" value="Enviar formulario" tabindex="10">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <footer><br><hr><center>&copy; by xavimat</center><br></footer>
+
 </body>
 
 </html>
