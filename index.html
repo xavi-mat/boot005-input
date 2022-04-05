@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viejuners rule!</title>
+</head>
+<body>
+    <h1>Club viejuner</h1>
+    <form method="get">
+        <fieldset>
+            <legend>Tú</legend>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" placeholder="Nombre" maxlength="30" required>
+        <label for="surname">Apellidos</label>
+        <input type="text" name="surname" id="surname" placeholder="Apellidos" maxlength="40" required>
+        <br><br>
+        <label for="age">Edad</label>
+        <input type="number" name="age" id="age" min="70" value="70" required>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sex" id="sex-female" value="female" required>
+            <label for="sex-female">Femenino</label>
+            <br>
+            <input type="radio" name="sex" id="sex-male" value="male" required>
+            <label for="sex-male">Masculino</label>
+        </fieldset>
+        <input type="checkbox" name="soyviejuner" id="soyviejuner" required>
+        <label for="soyviejuner">Me siento viejuner</label>
+        <br>
+        <textarea name="aboutme" id="aboutme" rows="5" cols="40" placeholder="Escribe algo sobre ti"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Tus circunstancias</legend>
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required>
+            <label for="telf">Teléfono</label>
+            <input type="text" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required>
+
+        </fieldset>
+
+        <br>
+        <input type="submit">
+    </form>
+
+    <h2>Los ladronzuelos de bicicletas</h2>
+    <form method="get">
+        
+    </form>
+</body>
+</html>
