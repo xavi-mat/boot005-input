@@ -31,7 +31,8 @@
                   <label for="name">*Nombre:</label>
                 </td>
                 <td>
-                  <input type="text" name="name" id="name" placeholder="Nombre" maxlength="40" size="40" required autofocus tabindex="1">
+                  <input type="text" name="name" id="name" placeholder="Nombre" maxlength="40" size="40" required
+                    autofocus tabindex="1">
                 </td>
               </tr>
               <tr>
@@ -39,11 +40,12 @@
                   <label for="surname">*Apellidos:</label>
                 </td>
                 <td>
-                  <input type="text" name="surname" id="surname" placeholder="Apellidos" maxlength="40" size="40" required tabindex="2">
+                  <input type="text" name="surname" id="surname" placeholder="Apellidos" maxlength="40" size="40"
+                    required tabindex="2">
                 </td>
               </tr>
-              </table>
-              <table cellpadding="5">
+            </table>
+            <table cellpadding="5">
               <tr>
                 <td>
                   <label for="age">*Edad</label>
@@ -51,9 +53,9 @@
                   <br>
                   <br>
                   <input type="checkbox" name="soyviejuner" id="soyviejuner" required tabindex="4"
-                    onchange="okviejuner.innerText=this.checked ? 'VIEJUNER CERTIFIED!' : '&nbsp;'">
+                    onchange="okviejuner.innerText=this.checked ? 'Viejuner certified!' : '&nbsp;'">
                   <label for="soyviejuner">*Me siento viejuner</label>
-                  <div><b id="okviejuner">&nbsp;</b></div>
+                  <div><b><output name="okviejuner" for="soyviejuner">&nbsp;</output></b></div>
                 </td>
                 <td>
                   <fieldset>
@@ -83,15 +85,17 @@
                   <label for="email">*Correo electrónico</label>
                 </td>
                 <td>
-                  <input type="email" name="email" id="email" size="40" maxlength="50" placeholder="Correo electrónico" required tabindex="8">
+                  <input type="email" name="email" id="email" size="40" maxlength="50" placeholder="Correo electrónico"
+                    required tabindex="8">
                 </td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>
                   <label for="telf">*Teléfono</label>
                 </td>
                 <td>
-                  <input type="text" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required tabindex="9">
+                  <input type="tel" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required
+                    tabindex="9">
                 </td>
               </tr>
             </table>
@@ -107,7 +111,10 @@
     </table>
   </form>
 
-  <footer><br><hr><center>&copy; by xavimat</center><br></footer>
+  <footer><br>
+    <hr>
+    <center>&copy; by xavimat</center><br>
+  </footer>
 
 </body>
 
