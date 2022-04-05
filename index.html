@@ -1,117 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viejuners rule!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viejuners rule!</title>
 </head>
+
 <body>
-    <h1>Club viejuner</h1>
-    <form method="get">
-        <fieldset>
+  <nav>
+    <a href="index.html">Club viejuner</a> |
+    <a href="robabicis.html">Denuncia bici robada</a>
+  </nav>
+
+  <h1>Club viejuner</h1>
+  <img src="https://raw.githubusercontent.com/TheBridge-FullStackDeveloper/html-pp-formularios/master/abueletes.jpg"
+    alt="Abueletes en bici" width="100%">
+  <br>
+  <br>
+  <form method="get">
+    <table>
+      <tr>
+        <td>
+          <fieldset>
             <legend>Tú</legend>
-        <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="Nombre" maxlength="30" required>
-        <label for="surname">Apellidos</label>
-        <input type="text" name="surname" id="surname" placeholder="Apellidos" maxlength="40" required>
-        <br><br>
-        <label for="age">Edad</label>
-        <input type="number" name="age" id="age" min="70" value="70" required>
-        <fieldset>
-            <legend>Sexo</legend>
-            <input type="radio" name="sex" id="sex-female" value="female" required>
-            <label for="sex-female">Femenino</label>
-            <br>
-            <input type="radio" name="sex" id="sex-male" value="male" required>
-            <label for="sex-male">Masculino</label>
-        </fieldset>
-        <input type="checkbox" name="soyviejuner" id="soyviejuner" required>
-        <label for="soyviejuner">Me siento viejuner</label>
-        <br>
-        <textarea name="aboutme" id="aboutme" rows="5" cols="40" placeholder="Escribe algo sobre ti"></textarea>
-        </fieldset>
-        <fieldset>
+            <table cellpadding="5">
+              <tr>
+                <td>
+                  <label for="name">*Nombre:</label>
+                </td>
+                <td>
+                  <input type="text" name="name" id="name" placeholder="Nombre" maxlength="40" size="40" required
+                    autofocus tabindex="1">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="surname">*Apellidos:</label>
+                </td>
+                <td>
+                  <input type="text" name="surname" id="surname" placeholder="Apellidos" maxlength="40" size="40"
+                    required tabindex="2">
+                </td>
+              </tr>
+            </table>
+            <table cellpadding="5">
+              <tr>
+                <td>
+                  <label for="age">*Edad</label>
+                  <input type="number" name="age" id="age" min="70" value="70" size="5" required tabindex="3">
+                  <br>
+                  <br>
+                  <input type="checkbox" name="soyviejuner" id="soyviejuner" required tabindex="4"
+                    onchange="okviejuner.innerText=this.checked ? 'Viejuner certified!' : '&nbsp;'">
+                  <label for="soyviejuner">*Me siento viejuner</label>
+                  <div><b><output name="okviejuner" for="soyviejuner">&nbsp;</output></b></div>
+                </td>
+                <td>
+                  <fieldset>
+                    <legend>*Sexo</legend>
+                    <input type="radio" name="sex" id="sex-female" value="female" required tabindex="5">
+                    <label for="sex-female">Femenino</label>
+                    <br>
+                    <input type="radio" name="sex" id="sex-male" value="male" required tabindex="6">
+                    <label for="sex-male">Masculino</label>
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <textarea name="aboutme" id="aboutme" rows="5" cols="50"
+                    placeholder="Escribe algo sobre ti (opcional)" tabindex="7"></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <br>
+          <fieldset>
             <legend>Tus circunstancias</legend>
-            <label for="email">Correo electrónico</label>
-            <input type="email" name="email" id="email" required>
-            <label for="telf">Teléfono</label>
-            <input type="text" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required>
+            <table cellpadding="5">
+              <tr>
+                <td>
+                  <label for="email">*Correo electrónico</label>
+                </td>
+                <td>
+                  <input type="email" name="email" id="email" size="40" maxlength="50" placeholder="Correo electrónico"
+                    required tabindex="8">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="telf">*Teléfono</label>
+                </td>
+                <td>
+                  <input type="tel" name="telf" id="telf" pattern="[0-9]+" placeholder="Solo números" required
+                    tabindex="9">
+                </td>
+              </tr>
+            </table>
 
-        </fieldset>
+          </fieldset>
+          <p>*Todos los campos con asterisco (*) son obligatorios.</p>
+          <div align="right">
+            <input type="reset" value="Vaciar formulario" tabindex="-1">
+            <input type="submit" value="Enviar formulario" tabindex="10">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
 
-        <br>
-        <input type="submit">
-    </form>
+  <footer><br>
+    <hr>
+    <center>&copy; by xavimat</center><br>
+  </footer>
 
-    <h2>Los ladronzuelos de bicicletas</h2>
-    <form method="get">
-        Formulario de denuncia de robo de bicicleta
-        <fieldset>
-            <legend>Datos</legend>
-            <label for="day">Día</label>
-            <input type="date" name="day" id="day" required>
-            <label for="time">Hora</label>
-            <input type="time" id="hour" name="hour" required>
-            <label for="color">Color</label>
-            <input type="color" id="color" name="color" required>
-            <label for="price">Precio en €</label>
-            <input type="range" name="price" id="price" min="0" max="10000" value="100" step="100" oninput="showprice.value=parseInt(price.value)">
-            <output name="showprice">100</output> €
-            <br>
-            <label for="bikekind">Tipo de bicicleta</label>
-            <select name="bikekind" id="bikekind">
-                <option selected disabled>-- Escoge el tipo de bicicleta --</option>
-                <option value="" disabled>Paseo</option>
-                <option value="">- Señorial</option>
-                <option value="">- Anti-plebeyos</option>
-                <option value="">- PorEncimaDelHombro</option>
-                <option value="" disabled>Montaña</option>
-                <option value="">- Gamusinos</option>
-                <option value="">- Hueleflores premium</option>
-                <option value="">- Fango lover</option>
-                <option value="" disabled>Carreras</option>
-                <option value="">- Metroymedio</option>
-                <option value="">- 3 de la tarde. Fluorescente edition</option>
-                <option value="">- Grupitors</option>
-            </select>
-            <br>
-            <label for="accessories">Accesorios</label>
-            <select name="accessories" id="accessories" size="6" multiple>
-                <option value="">Ruedines</option>
-                <option value="">Pegatinas</option>
-                <option value="">Cestita</option>
-                <option value="">Bomba de aire</option>
-                <option value="">Timbre</option>
-                <option value="">Foco</option>
-            </select>
-            <br>
-            <label for="brand">Marca</label>
-            <input list="brand">
-            <datalist name="brand" id="brand" required>
-                <option value="argon">argon</option>
-                <option value="bh">bh</option>
-                <option value="bianchi">bianchi</option>
-                <option value="bmc">bmc</option>
-                <option value="cannondale">cannondale</option>
-                <option value="canyon">canyon</option>
-                <option value="cervélo">cervélo</option>
-                <option value="cube">cube</option>
-                <option value="factor">factor</option>
-                <option value="ghost">ghost</option>
-                <option value="giant">giant</option>
-                <option value="lapierre">lapierre</option>
-                <option value="look">look</option>
-                <option value="megamo">megamo</option>
-                <option value="merida">merida</option>
-                <option value="orbea">orbea</option>
-                <option value="pinarello">pinarello</option>
-                <option value="protek">protek</option>
-                <option value="scott">scott</option>
-                <option value="specialized">specialized</option>
-                <option value="trek">trek</option>
-            </datalist>
-        </fieldset>
-    </form>
 </body>
+
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denuncia robo bicicleta</title>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Club viejuner</a> |
+    <a href="robabicis.html">Denuncia bici robada</a>
+  </nav>
+
+  <h1>Los ladronzuelos de bicicletas</h1>
+  <form method="get">
+    <h2>Formulario de denuncia de robo de bicicleta</h2>
+    <table cellpadding="5">
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Datos de la desaparición</legend>
+            <label for="day">Día:</label>
+            <input type="date" name="day" id="day" required autofocus tabindex="1">
+            <label for="hour">Hora:</label>
+            <input type="time" id="hour" name="hour" required tabindex="2">
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Datos de la bicicleta</legend>
+            <table cellpadding="5">
+              <tr>
+                <th>
+                  <label for="color">Color</label>
+                </th>
+                <td>
+                  <input type="color" id="color" name="color" tabindex="3">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="price">Precio aproximado</label>
+                </th>
+                <td>
+                  <input type="range" name="price" id="price" min="0" max="10000" value="200" step="100"
+                    oninput="showprice.value=parseInt(price.value)" tabindex="4">
+                  <output name="showprice" for="price">200</output> €
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="bikekind">Tipo de bicicleta</label>
+                </th>
+                <td>
+                  <select name="bikekind" id="bikekind" required tabindex="5">
+                    <option value="">-- Escoge el tipo de bicicleta --</option>
+                    <optgroup label="Paseo">
+                      <option value="lord">- Señorial</option>
+                      <option value="nopeasant">- Anti-plebeyos</option>
+                      <option value="posh">- PorEncimaDelHombro</option>
+                    </optgroup>
+                    <optgroup label="Montaña">
+                      <option value="gamu">- Gamusinos</option>
+                      <option value="sniflowers">- Hueleflores premium</option>
+                      <option value="mudlove">- Fango lover</option>
+                    </optgroup>
+                    <optgroup label="Carreras">
+                      <option value="threefeet">- Metroymedio</option>
+                      <option value="coenta">- 3 de la tarde. Fluorescente edition</option>
+                      <option value="peoplepeople">- Grupitors</option>
+                    </optgroup>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="accessories">Accesorios</label>
+                </th>
+                <td>
+                  <select name="accessories" id="accessories" size="6" multiple tabindex="6">
+                    <option value="">Ruedines</option>
+                    <option value="">Pegatinas</option>
+                    <option value="">Cestita</option>
+                    <option value="">Bomba de aire</option>
+                    <option value="">Timbre</option>
+                    <option value="">Foco</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="brand">Marca</label>
+                </th>
+                <td>
+                  <input type="text" list="brandlist" name="brand" id="brand" placeholder="Escribe la marca" required
+                    tabindex="7">
+                  <datalist id="brandlist">
+                    <option value="argon">argon</option>
+                    <option value="bh">bh</option>
+                    <option value="bianchi">bianchi</option>
+                    <option value="bmc">bmc</option>
+                    <option value="cannondale">cannondale</option>
+                    <option value="canyon">canyon</option>
+                    <option value="cervelo">cervélo</option>
+                    <option value="cube">cube</option>
+                    <option value="factor">factor</option>
+                    <option value="ghost">ghost</option>
+                    <option value="giant">giant</option>
+                    <option value="lapierre">lapierre</option>
+                    <option value="look">look</option>
+                    <option value="megamo">megamo</option>
+                    <option value="merida">merida</option>
+                    <option value="orbea">orbea</option>
+                    <option value="pinarello">pinarello</option>
+                    <option value="protek">protek</option>
+                    <option value="scott">scott</option>
+                    <option value="specialized">specialized</option>
+                    <option value="trek">trek</option>
+                  </datalist>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Bontoncitos</legend>
+            <div align="right">
+              <input type="reset" value="Vaciar formulario" tabindex="-1">
+              <input type="submit" value="Enviar datos" tabindex="8">
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <footer><br>
+    <hr>
+    <center>&copy; by xavimat</center><br>
+  </footer>
+</body>
+
+</html>
